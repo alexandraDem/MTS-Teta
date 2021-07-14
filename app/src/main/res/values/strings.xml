@@ -19,4 +19,12 @@
     <string name="unfilled_star">Эта звезда рейтинга отсутствует</string>
     <string name="home">Home button</string>
     <string name="profile">Profile button</string>
+
+    <string name="search_button">Search button</string>
+    <string name="popular_now">Популярное сейчас</string>
+    <string name="genre1">боевики</string>
+    <string name="genre2">драмы</string>
+    <string name="genre3">комедии</string>
+    <string name="genre4">артхаус</string>
+    <string name="genre5">мелодрамы</string>
 </resources>
