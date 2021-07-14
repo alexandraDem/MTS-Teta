@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="20dp"
+                android:contentDescription="@string/search_button"
+                android:background="@drawable/ic_search_button"/>
+
+            <TextView
+                android:id="@+id/popular_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="72dp"
+                android:layout_marginStart="20dp"
+                android:textSize="16sp"
+                android:text="@string/popular_now"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+
+
+
+            <HorizontalScrollView
+                android:id="@+id/genre_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/popular_now"
+                android:layout_marginTop="18dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/genre1_rectangle"
+                        android:background="@drawable/ic_rectangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:contentDescription="@string/genre1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="20dp"/>
+                    <TextView
+                        android:id="@+id/genre1"
+                        android:text="@string/genre1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/genre1_rectangle"
+                        app:layout_constraintTop_toTopOf="@id/genre1_rectangle"
+                        app:layout_constraintEnd_toEndOf="@id/genre1_rectangle"
+                        app:layout_constraintBottom_toBottomOf="@id/genre1_rectangle"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/genre2_rectangle"
+                        android:background="@drawable/ic_rectangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:contentDescription="@string/genre2"
+                        app:layout_constraintStart_toEndOf="@id/genre1_rectangle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="6dp"/>
+                    <TextView
+                        android:id="@+id/genre2"
+                        android:text="@string/genre2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/genre2_rectangle"
+                        app:layout_constraintTop_toTopOf="@id/genre2_rectangle"
+                        app:layout_constraintEnd_toEndOf="@id/genre2_rectangle"
+                        app:layout_constraintBottom_toBottomOf="@id/genre2_rectangle"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/genre3_rectangle"
+                        android:background="@drawable/ic_rectangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:contentDescription="@string/genre3"
+                        app:layout_constraintStart_toEndOf="@id/genre2_rectangle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="6dp"/>
+                    <TextView
+                        android:id="@+id/genre3"
+                        android:text="@string/genre3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/genre3_rectangle"
+                        app:layout_constraintTop_toTopOf="@id/genre3_rectangle"
+                        app:layout_constraintEnd_toEndOf="@id/genre3_rectangle"
+                        app:layout_constraintBottom_toBottomOf="@id/genre3_rectangle"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/genre4_rectangle"
+                        android:background="@drawable/ic_rectangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:contentDescription="@string/genre4"
+                        app:layout_constraintStart_toEndOf="@id/genre3_rectangle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="6dp"/>
+                    <TextView
+                        android:id="@+id/genre4"
+                        android:text="@string/genre4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/genre4_rectangle"
+                        app:layout_constraintTop_toTopOf="@id/genre4_rectangle"
+                        app:layout_constraintEnd_toEndOf="@id/genre4_rectangle"
+                        app:layout_constraintBottom_toBottomOf="@id/genre4_rectangle"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/genre5_rectangle"
+                        android:background="@drawable/ic_rectangle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:contentDescription="@string/genre5"
+                        app:layout_constraintStart_toEndOf="@id/genre4_rectangle"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginStart="6dp"/>
+                    <TextView
+                        android:id="@+id/genre5"
+                        android:text="@string/genre5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="@id/genre5_rectangle"
+                        app:layout_constraintTop_toTopOf="@id/genre5_rectangle"
+                        app:layout_constraintEnd_toEndOf="@id/genre5_rectangle"
+                        app:layout_constraintBottom_toBottomOf="@id/genre5_rectangle"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginEnd="9dp"
+                        android:layout_marginBottom="4dp"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/genre_scroll_view"
+                >
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
