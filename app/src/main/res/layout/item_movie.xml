@@ -25,6 +25,7 @@
         android:id="@+id/film_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/film_poster"
         app:layout_constraintStart_toStartOf="@+id/film_poster"
         app:layout_constraintEnd_toEndOf="@+id/film_poster"
@@ -51,60 +52,78 @@
         android:maxLines="6"
         android:ellipsize="end"/>
 
-
-    <ImageView
-        android:id="@+id/star_first"
-        android:layout_width="14dp"
-        android:layout_height="13dp"
-        android:src="@drawable/ic_filledstar"
+    <RatingBar
+        android:id="@+id/rating_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:clickable="false"
+        android:isIndicator="true"
+        android:progressTint="@android:color/black"
+        android:progressBackgroundTint="@android:color/black"
+        android:secondaryProgressTint="@android:color/background_dark"
+        style="?android:attr/ratingBarStyleSmall"
         app:layout_constraintStart_toStartOf="@+id/film_description"
         app:layout_constraintTop_toBottomOf="@+id/film_description"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="55dp"
-        android:contentDescription="@string/filled_star"/>
+        />
 
-    <ImageView
-        android:id="@+id/star_second"
-        android:layout_width="14dp"
-        android:layout_height="13dp"
-        android:src="@drawable/ic_filledstar"
-        app:layout_constraintTop_toTopOf="@+id/star_first"
-        app:layout_constraintStart_toEndOf="@+id/star_first"
-        android:contentDescription="@string/filled_star"/>
 
-    <ImageView
-        android:id="@+id/star_third"
-        android:layout_width="14dp"
-        android:layout_height="13dp"
-        android:src="@drawable/ic_filledstar"
-        app:layout_constraintTop_toTopOf="@+id/star_first"
-        app:layout_constraintStart_toEndOf="@+id/star_second"
-        android:layout_marginBottom="55dp"
-        android:contentDescription="@string/filled_star"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/star_first"-->
+<!--        android:layout_width="14dp"-->
+<!--        android:layout_height="13dp"-->
+<!--        android:src="@drawable/ic_filledstar"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/film_description"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/film_description"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:layout_marginBottom="55dp"-->
+<!--        android:contentDescription="@string/filled_star"/>-->
 
-    <ImageView
-        android:id="@+id/star_fourth"
-        android:layout_width="14dp"
-        android:layout_height="13dp"
-        android:src="@drawable/ic_filledstar"
-        app:layout_constraintTop_toTopOf="@+id/star_first"
-        app:layout_constraintStart_toEndOf="@+id/star_third"
-        android:contentDescription="@string/filled_star"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/star_second"-->
+<!--        android:layout_width="14dp"-->
+<!--        android:layout_height="13dp"-->
+<!--        android:src="@drawable/ic_filledstar"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/star_first"-->
+<!--        android:contentDescription="@string/filled_star"/>-->
 
-    <ImageView
-        android:id="@+id/star_fifth"
-        android:layout_width="14dp"
-        android:layout_height="13dp"
-        android:src="@drawable/ic_unfilledstar"
-        app:layout_constraintTop_toTopOf="@+id/star_first"
-        app:layout_constraintStart_toEndOf="@+id/star_fourth"
-        android:contentDescription="@string/unfilled_star"/>
+<!--    <ImageView-->
+<!--        android:id="@+id/star_third"-->
+<!--        android:layout_width="14dp"-->
+<!--        android:layout_height="13dp"-->
+<!--        android:src="@drawable/ic_filledstar"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/star_second"-->
+<!--        android:layout_marginBottom="55dp"-->
+<!--        android:contentDescription="@string/filled_star"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/star_fourth"-->
+<!--        android:layout_width="14dp"-->
+<!--        android:layout_height="13dp"-->
+<!--        android:src="@drawable/ic_filledstar"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/star_third"-->
+<!--        android:contentDescription="@string/filled_star"/>-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/star_fifth"-->
+<!--        android:layout_width="14dp"-->
+<!--        android:layout_height="13dp"-->
+<!--        android:src="@drawable/ic_unfilledstar"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/star_fourth"-->
+<!--        android:contentDescription="@string/unfilled_star"/>-->
 
     <TextView
         android:id="@+id/age_restriction"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         tools:text="18+"
         android:textSize="7sp"
         android:textColor="@color/black"

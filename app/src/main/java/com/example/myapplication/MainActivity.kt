@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
@@ -70,6 +71,9 @@ class MainActivity : AppCompatActivity() {
         )
         val adapter = MoviesAdapter(this, movies)
         recycler.adapter = adapter
+        recycler.layoutManager = GridLayoutManager(this, 2)
+
+//        recycler.addItemDecoration(MoviesItemDecorator(this, R.dimen.movies_recycler_view_side_margin, R.dimen.movies_recycler_view_top_margin))
 //
 //        fun onMoviesChanged(movies: List<MovieDto>){
 //            adapter.movies = movies

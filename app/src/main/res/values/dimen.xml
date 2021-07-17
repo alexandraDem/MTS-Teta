@@ -12,4 +12,7 @@
 
     <dimen name="size_movies_list_title">14sp</dimen>
     <dimen name="size_movies_list_description">12sp</dimen>
+
+    <dimen name="movies_recycler_view_side_margin">5dp</dimen>
+    <dimen name="movies_recycler_view_top_margin">5dp</dimen>
 </resources>

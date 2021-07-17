@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
@@ -21,13 +22,14 @@ class MoviesAdapter(
 
         private val title: TextView = itemView.findViewById(R.id.film_title)
         private val description: TextView =  itemView.findViewById(R.id.film_description)
-//        private val rateScore:
+        private val ratingBar: RatingBar = itemView.findViewById(R.id.rating_bar)
         private val ageRestriction: TextView = itemView.findViewById(R.id.age_restriction)
         private val poster: ImageView = itemView.findViewById(R.id.film_poster)
 
         fun bind(movie: MovieDto){
             title.text = movie.title
             description.text = movie.description
+            ratingBar.rating = movie.rateScore.toFloat()
             ageRestriction.text = movie.ageRestriction.toString() + "+"
             poster.load(movie.imageUrl)
         }
