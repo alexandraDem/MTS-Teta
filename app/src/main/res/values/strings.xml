@@ -27,4 +27,7 @@
     <string name="genre3">комедии</string>
     <string name="genre4">артхаус</string>
     <string name="genre5">мелодрамы</string>
+
+    <string name="main_click_message">main click message</string>
+    <string name="main_empty_message">----</string>
 </resources>

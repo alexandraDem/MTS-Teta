@@ -71,55 +71,6 @@
         />
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/star_first"-->
-<!--        android:layout_width="14dp"-->
-<!--        android:layout_height="13dp"-->
-<!--        android:src="@drawable/ic_filledstar"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/film_description"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/film_description"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        android:layout_marginBottom="55dp"-->
-<!--        android:contentDescription="@string/filled_star"/>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/star_second"-->
-<!--        android:layout_width="14dp"-->
-<!--        android:layout_height="13dp"-->
-<!--        android:src="@drawable/ic_filledstar"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/star_first"-->
-<!--        android:contentDescription="@string/filled_star"/>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/star_third"-->
-<!--        android:layout_width="14dp"-->
-<!--        android:layout_height="13dp"-->
-<!--        android:src="@drawable/ic_filledstar"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/star_second"-->
-<!--        android:layout_marginBottom="55dp"-->
-<!--        android:contentDescription="@string/filled_star"/>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/star_fourth"-->
-<!--        android:layout_width="14dp"-->
-<!--        android:layout_height="13dp"-->
-<!--        android:src="@drawable/ic_filledstar"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/star_third"-->
-<!--        android:contentDescription="@string/filled_star"/>-->
-
-<!--    <ImageView-->
-<!--        android:id="@+id/star_fifth"-->
-<!--        android:layout_width="14dp"-->
-<!--        android:layout_height="13dp"-->
-<!--        android:src="@drawable/ic_unfilledstar"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/star_first"-->
-<!--        app:layout_constraintStart_toEndOf="@+id/star_fourth"-->
-<!--        android:contentDescription="@string/unfilled_star"/>-->
-
     <TextView
         android:id="@+id/age_restriction"
         android:layout_width="20dp"
