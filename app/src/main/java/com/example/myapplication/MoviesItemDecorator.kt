@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Context
+import android.graphics.Canvas
 import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -20,9 +21,11 @@ class MoviesItemDecorator(
     ) {
         super.getItemOffsets(outRect, view, parent, state)
 
-        outRect.left = sidePadding
-        outRect.right = sidePadding
-        outRect.top = topAndBottomPadding
-        outRect.bottom = topAndBottomPadding
+        //outRect.left = view.width / 8
+
+        //outRect.right = sidePadding
+        //outRect.top = topAndBottomPadding
+        //outRect.bottom = topAndBottomPadding
     }
+
 }
