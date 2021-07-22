@@ -3,11 +3,13 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import android.widget.Toast.LENGTH_LONG
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.DTOs.MovieDto
+import com.example.myapplication.DataSources.MoviesDataSourceImpl
+import com.example.myapplication.Models.MoviesModel
 
-class MainActivity : AppCompatActivity(), MovieClickListener {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var moviesModel: MoviesModel
 
@@ -24,9 +26,6 @@ class MainActivity : AppCompatActivity(), MovieClickListener {
         initViews()
     }
 
-    override fun movieClick(title: String) {
-        Toast.makeText(this, title, Toast.LENGTH_SHORT).show()
-    }
 
     private fun initViews() {
 
@@ -47,7 +46,6 @@ class MainActivity : AppCompatActivity(), MovieClickListener {
         showToast(item.title)
     }
 
-
     // show a floating message
     private fun showToast(message: String?) {
         when {
@@ -57,7 +55,6 @@ class MainActivity : AppCompatActivity(), MovieClickListener {
             else -> Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
         }
     }
-
 }
 
 private const val MOVIES_PER_LINE = 2

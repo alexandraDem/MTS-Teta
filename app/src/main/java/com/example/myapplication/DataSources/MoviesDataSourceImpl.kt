@@ -1,4 +1,6 @@
-package com.example.myapplication
+package com.example.myapplication.DataSources
+
+import com.example.myapplication.DTOs.MovieDto
 
 class MoviesDataSourceImpl : MoviesDataSource {
     override fun getMovies() = listOf(

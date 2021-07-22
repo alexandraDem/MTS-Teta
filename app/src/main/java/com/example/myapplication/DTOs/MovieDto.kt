@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.DTOs
 
 data class MovieDto(
     val title: String,
