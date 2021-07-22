@@ -2,22 +2,36 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.DTOs.MovieDto
 import com.example.myapplication.DataSources.MoviesDataSourceImpl
 import com.example.myapplication.Models.MoviesModel
 
-class MovieDetailsFragment : AppCompatActivity() {
+class MovieDetailsFragment : Fragment() {
 
     private lateinit var moviesModel: MoviesModel
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_movie_details)
-
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        val view = inflater.inflate(R.layout.fragment_movie_details, container, false)
+        return view
+//        return super.onCreateView(inflater, container, savedInstanceState)
     }
+
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.fragment_movie_details)
+//
+//    }
 
     override fun onStart() {
         super.onStart()
@@ -29,11 +43,11 @@ class MovieDetailsFragment : AppCompatActivity() {
 
     private fun initViews() {
 
-        val recycler = findViewById<RecyclerView>(R.id.movies_recycler)
+        val recycler = view?.findViewById<RecyclerView>(R.id.movies_recycler)
         val movies: List<MovieDto> = moviesModel.getMovies()
-        val adapter = MoviesAdapter(this, movies, this::adapterMovieListener)
-        recycler.adapter = adapter
-        recycler.layoutManager = GridLayoutManager(this, MOVIES_PER_LINE)
+        val adapter = MoviesAdapter(requireContext(), movies, this::adapterMovieListener)
+        recycler?.adapter = adapter
+        recycler?.layoutManager = GridLayoutManager(requireContext(), MOVIES_PER_LINE)
 
     }
 
@@ -52,7 +66,7 @@ class MovieDetailsFragment : AppCompatActivity() {
             message.isNullOrEmpty() -> {
                 showToast("Пустое сообщение")
             }
-            else -> Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+            else -> Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
         }
     }
 }
