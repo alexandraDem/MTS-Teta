@@ -33,4 +33,6 @@
     <string name="main_age_restriction_text">%1$d+</string>
     <string name="main_click_message">Название: %1$s</string>
     <string name="main_empty_message">Тут должен был быть текст</string>
+
+    <string name="empty_string"></string>
 </resources>
